@@ -1,6 +1,7 @@
 import type { InferGetStaticPropsType } from "next"
 import getAllproducts from "@framework/product/get-all-products"
 import { getConfig } from "@framework/api/config"
+import { Layout } from '@components/common' 
 
 export async function getStaticProps() {
   const config = getConfig()
@@ -24,3 +25,5 @@ export default function Home({
     </div>
   )
 }
+
+Home.Layout = Layout 
